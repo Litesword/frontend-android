@@ -178,22 +178,13 @@ function Department1({ navigation }) {
   return (
     <View>
       <Text style={styles.de1}>Departments</Text>
-      <View style={styles.deonfo}>
-        <View style={styles.deonfo2}>
-          {departmentsArray.slice(0, Math.ceil(departmentsArray.length / 2)).map((department, index) => (
-            <View key={index} style={styles.deonfo1}>
-              <Text style={styles.depar}>{department}</Text>
-            </View>
-          ))}
-        </View>
-        <View style={styles.deonfo3}>
-          {departmentsArray.slice(Math.ceil(departmentsArray.length / 2)).map((department, index) => (
-            <View key={index} style={styles.deonfo1}>
-              <Text style={styles.depar}>{department}</Text>
-            </View>
-          ))}
-        </View>
-      </View>
+      <View style={styles.deonfoContainer}>
+  {departmentsArray.map((department, index) => (
+    <View key={index} style={styles.deonfo1}>
+      <Text style={styles.depar}>{department}</Text>
+    </View>
+  ))}
+</View>
     </View>
   );
 }
@@ -208,22 +199,13 @@ function Department1({ navigation }) {
   return (
     <View>
       <Text style={styles.de1}>Departments</Text>
-      <View style={styles.deonfo}>
-        <View style={styles.deonfo2}>
-          {departmentsArray.slice(0, Math.ceil(departmentsArray.length / 2)).map((department, index) => (
-            <View key={index} style={styles.deonfo1}>
-              <Text style={styles.depar}>{department}</Text>
-            </View>
-          ))}
-        </View>
-        <View style={styles.deonfo3}>
-          {departmentsArray.slice(Math.ceil(departmentsArray.length / 2)).map((department, index) => (
-            <View key={index} style={styles.deonfo1}>
-              <Text style={styles.depar}>{department}</Text>
-            </View>
-          ))}
-        </View>
-      </View>
+      <View style={styles.deonfoContainer}>
+  {departmentsArray.map((department, index) => (
+    <View key={index} style={styles.deonfo1}>
+      <Text style={styles.depar}>{department}</Text>
+    </View>
+  ))}
+</View>
     </View>
   );
 }
@@ -238,22 +220,13 @@ function Department3({ navigation }) {
   return (
     <View>
       <Text style={styles.de1}>Departments</Text>
-      <View style={styles.deonfo}>
-        <View style={styles.deonfo2}>
-          {departmentsArray.slice(0, Math.ceil(departmentsArray.length / 2)).map((department, index) => (
-            <View key={index} style={styles.deonfo1}>
-              <Text style={styles.depar}>{department}</Text>
-            </View>
-          ))}
-        </View>
-        <View style={styles.deonfo3}>
-          {departmentsArray.slice(Math.ceil(departmentsArray.length / 2)).map((department, index) => (
-            <View key={index} style={styles.deonfo1}>
-              <Text style={styles.depar}>{department}</Text>
-            </View>
-          ))}
-        </View>
-      </View>
+      <View style={styles.deonfoContainer}>
+  {departmentsArray.map((department, index) => (
+    <View key={index} style={styles.deonfo1}>
+      <Text style={styles.depar}>{department}</Text>
+    </View>
+  ))}
+</View>
     </View>
   );
 }
@@ -267,22 +240,13 @@ function Department4({ navigation }) {
   return (
     <View>
       <Text style={styles.de1}>Departments</Text>
-      <View style={styles.deonfo}>
-        <View style={styles.deonfo2}>
-          {departmentsArray.slice(0, Math.ceil(departmentsArray.length / 2)).map((department, index) => (
-            <View key={index} style={styles.deonfo1}>
-              <Text style={styles.depar}>{department}</Text>
-            </View>
-          ))}
-        </View>
-        <View style={styles.deonfo3}>
-          {departmentsArray.slice(Math.ceil(departmentsArray.length / 2)).map((department, index) => (
-            <View key={index} style={styles.deonfo1}>
-              <Text style={styles.depar}>{department}</Text>
-            </View>
-          ))}
-        </View>
-      </View>
+      <View style={styles.deonfoContainer}>
+  {departmentsArray.map((department, index) => (
+    <View key={index} style={styles.deonfo1}>
+      <Text style={styles.depar}>{department}</Text>
+    </View>
+  ))}
+</View>
     </View>
   );
 }
