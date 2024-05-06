@@ -187,10 +187,8 @@ function Notscreen({ navigation }){
 };
 function Department1({ navigation }) {
   const departmentsArray = [];
-  const imageArray=[];
   for(let i = 0;i<result1.length;i++){
     departmentsArray.push(result1[i].departmentName)
-    imageArray.push(result1[i].imagepic)
   }
   console.log(result1);
   return (
@@ -199,13 +197,9 @@ function Department1({ navigation }) {
       <View style={styles.deonfoContainer}>
   {departmentsArray.map((department, index) => (
     <View key={index} style={styles.deonfo1}>
+      <Image source={{uri:'https://clipartcraft.com/images/logo-instagram-1080p.png'}}></Image>
       <Text style={styles.depar}>{department}</Text>
     </View>
-  ))}
-  {imageArray.map((imagepic,index) =>(
-  <View key={index}  >
-      <Image source={{uri:imagepic}} style={{width:'50%',height:'10px'}} ></Image>
-  </View>
   ))}
 </View>
     </View>
@@ -213,13 +207,8 @@ function Department1({ navigation }) {
 }
  function Department2({navigation}) {
   const departmentsArray = [];
-  const imageArray =[];
   for(let i = 0;i<result2.length;i++){
     departmentsArray.push(result2[i].departmentName)
-  }
-  for(let i =0;i<result2.length;i++){
-    console.log(result2[i]);
-    imageArray.push(result2[i].imagepic)
   }
   console.log(result2)
 
@@ -233,11 +222,6 @@ function Department1({ navigation }) {
       <Text style={styles.depar}>{department}</Text>
     </View>
   ))}
-  {imageArray.map((imagepic,index) =>(
-  <View key={index}  >
-      <Image source={{uri:imagepic}} style={{width:'50%',height:'10px'}} ></Image>
-  </View>
-  ))}
 </View>
     </View>
   );
@@ -245,13 +229,10 @@ function Department1({ navigation }) {
 
 function Department3({ navigation }) {
   const departmentsArray = [];
-  const imageArray =[];
   for(let i = 0;i<result3.length;i++){
     departmentsArray.push(result3[i].departmentName)
   }
-  for(let i =0;i<result3.length;i++){
-    imageArray.push(result3[i].imagepic)
-  }
+  
   console.log(result3);
   return (
     <View>
@@ -262,23 +243,14 @@ function Department3({ navigation }) {
       <Text style={styles.depar}>{department}</Text>
     </View>
   ))}
-  {imageArray.map((imagepic,index) =>(
-  <View key={index}  >
-      <Image source={{uri:imagepic}} style={{width:'100%',height:'100px'}} ></Image>
-  </View>
-  ))}
 </View>
     </View>
   );
 }
 function Department4({ navigation }) {
   const departmentsArray = [];
-  const imageArray =[];
   for(let i = 0;i<result4.length;i++){
     departmentsArray.push(result4[i].departmentName)
-  }
-  for(let i =0;i<result4.length;i++){
-    imageArray.push(result4[i].imagepic)
   }
   console.log(result4);
   
@@ -290,11 +262,6 @@ function Department4({ navigation }) {
     <View key={index} style={styles.deonfo1}>
       <Text style={styles.depar}>{department}</Text>
     </View>
-  ))}
-  {imageArray.map((imagepic,index) =>(
-  <View key={index}  >
-      <Image source={{uri:imagepic}} style={{width:'50%',height:'10px'}} ></Image>
-  </View>
   ))}
 </View>
     </View>
