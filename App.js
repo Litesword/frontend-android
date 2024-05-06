@@ -10,24 +10,41 @@ import { launchImageLibrary } from "react-native-image-picker";
 import { useState } from "react";
 import  axios from "axios";
 let paper = "Paper2";
-  let result2 =  axios.get(`http://192.168.29.5:8080/add_department/${paper}`).then(response => {
-    result2 = response.data; // Log the response data (array of addDepartment objects)
+  let result2 =  axios.get(`http:http://192.168.178.21:8080/add_department/${paper}`).then(response => {
+    result2 = response.data;
+    console.log(response) // Log the response data (array of addDepartment objects)
   })
+  .catch(error => {
+    // Handle error
+    console.error('Error fetching data:', error);
+  });
   
  paper = "Paper1";
-  let result1 =  axios.get(`http://192.168.29.5:8080/add_department/${paper}`).then(response => {
-    result1 = response.data; // Log the response data (array of addDepartment objects)
+  let result1 =  axios.get(`http://192.168.178.21:8080/add_department/${paper}`).then(response => {
+    result1 = response.data;
+   // Log the response data (array of addDepartment objects)
   })
-
+  .catch(error => {
+    // Handle error
+    console.error('Error fetching data:', error);
+  });
  paper = "Paper3";
-  let result3 =  axios.get(`http://192.168.29.5:8080/add_department/${paper}`).then(response => {
-    result2 = response.data; // Log the response data (array of addDepartment objects)
-  })
-  paper = "Paper4";
-  let result4 =  axios.get(`http://192.168.29.5:8080/add_department/${paper}`).then(response => {
+
+  let result3 =  axios.get(`http://192.168.178.21:8080/add_department/${paper}`).then(response => {
     result3 = response.data; // Log the response data (array of addDepartment objects)
   })
-
+  .catch(error => {
+    // Handle error
+    console.error('Error fetching data:', error);
+  });
+  paper = "Paper4";
+  let result4 =  axios.get(`http://192.168.178.21:8080/add_department/${paper}`).then(response => {
+    result4 = response.data; // Log the response data (array of addDepartment objects)
+  })
+  .catch(error => {
+    // Handle error
+    console.error('Error fetching data:', error);
+  });
 
 function HomeScreen({ navigation }) {
   const insets =useSafeAreaInsets();
@@ -173,14 +190,14 @@ function Department1({ navigation }) {
   for(let i = 0;i<result1.length;i++){
     departmentsArray.push(result1[i].departmentName)
   }
-  
-  
+  console.log(result1);
   return (
     <View>
       <Text style={styles.de1}>Departments</Text>
       <View style={styles.deonfoContainer}>
   {departmentsArray.map((department, index) => (
     <View key={index} style={styles.deonfo1}>
+      <Image source={{uri:'https://clipartcraft.com/images/logo-instagram-1080p.png'}}></Image>
       <Text style={styles.depar}>{department}</Text>
     </View>
   ))}
@@ -188,13 +205,13 @@ function Department1({ navigation }) {
     </View>
   );
 }
-
- function Department2({ navigation }) {
+ function Department2({navigation}) {
   const departmentsArray = [];
   for(let i = 0;i<result2.length;i++){
     departmentsArray.push(result2[i].departmentName)
   }
   console.log(result2)
+
   
   return (
     <View>
@@ -216,7 +233,7 @@ function Department3({ navigation }) {
     departmentsArray.push(result3[i].departmentName)
   }
   
-  
+  console.log(result3);
   return (
     <View>
       <Text style={styles.de1}>Departments</Text>
@@ -235,7 +252,7 @@ function Department4({ navigation }) {
   for(let i = 0;i<result4.length;i++){
     departmentsArray.push(result4[i].departmentName)
   }
-  
+  console.log(result4);
   
   return (
     <View>
@@ -339,6 +356,17 @@ height:70,
 width:70,
 marginLeft:29
 },
+pic:{
+    display: 'flex',
+    flexWrap: 'nowrap',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 20,
+     borderWidth:'1px',
+     borderRadius:'10px',
+},
+
   inp:{
     marginLeft:50,
     alignContent:"center",
@@ -441,6 +469,7 @@ position:"relative"
   containe: {
     flex: 1,
     padding: 20,
+    flexDirection:'row',
   },
   navigation: {
     flexDirection: "row",
@@ -522,5 +551,5 @@ position:"relative"
   depar:{
     marginLeft:12,
   
-  }
+  },
   });
